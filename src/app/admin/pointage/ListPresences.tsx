@@ -1,7 +1,5 @@
 
-
-
-export default function ListEvent() {
+export default function ListPresences() {
 
     return (<>
         <div>
