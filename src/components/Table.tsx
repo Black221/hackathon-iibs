@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Pagination from "./Pagination";
 import Input from "./Input";
 
@@ -34,8 +34,14 @@ export const Table = ({label, columns, data, actions}: Props) => {
 
     const [sens, setSens] = useState<boolean>(false);
     const [current, setCurrent] = useState<Column>();
-    const [display, setDisplay] = useState<Data[]>(data)
+    const [display, setDisplay] = useState<Data[]>([])
     const [page, setPage] = useState<number>(0);
+
+    useEffect(() => {
+        setDisplay(data.slice(page, 5))
+        // eslint-disable-next-line
+    }, [])
+
 
 
     const sort = (column: Column) => {

@@ -21,7 +21,7 @@ export default function Input(
     }
 
     return (<>
-        <div className={`w-full flex flex-col space-y-1 ${className}`}>
+        <div className={` flex flex-col space-y-1 ${className}`}>
             <label htmlFor="name">{label}</label>
             <input type={type} id="name" placeholder={placeholder} className="border p-2 rounded-md" value={value} onChange={(e) => getValue(e.target.value)} />
         </div>

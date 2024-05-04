@@ -13,7 +13,7 @@ interface Props {
 export default function Pagination ({page, length, dataCount, action}: Props) {
 
     const [nbToRender, setNbToRender] = useState<number>(length);
-    const [pageList, setPageList] = useState(5);
+    const [pageList, setPageList] = useState(length);
 
 
     const onChangeRender = (nb: number) => {
@@ -41,11 +41,7 @@ export default function Pagination ({page, length, dataCount, action}: Props) {
                     <select value={nbToRender} onChange={(e) => {
                         onChangeRender(parseInt(e.target.value))
                     }} className="text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-md">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
                         <option value="5">5</option>
-                        <option value="6">6</option>
                         <option value="10">10</option>
                         <option value="20">20</option>
                         <option value="50">50</option>

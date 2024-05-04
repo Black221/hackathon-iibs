@@ -1,5 +1,5 @@
 
-export default function AddPresence() {
+export default function AddPointing() {
 
     return (<>
         <div>

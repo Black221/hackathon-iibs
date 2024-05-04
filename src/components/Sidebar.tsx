@@ -32,7 +32,7 @@ export const Sidebar = (props: ISidebar) => {
 
                 <div className={"flex flex-col h-full overflow-y-scroll pt-6 pb-8 "}>
 
-                    <h1 className={`text-4xl font-bold`}>
+                    <h1 className={`text-4xl font-bold py-4`}>
                         IIBS
                     </h1>
 

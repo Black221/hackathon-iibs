@@ -207,14 +207,14 @@ export const AdminSidebar: ISidebar = {
             group: "Pointing",
             links: [
                 {
-                    name: "List of presences",
+                    name: "List of pointings",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/presence/list",
+                    to: "/admin/pointings/list",
                 },
                 {
-                    name: "List of pointing",
+                    name: "Add a pointing",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/pointing/list",
+                    to: "/admin/pointings/add",
                 }
             ],
         },

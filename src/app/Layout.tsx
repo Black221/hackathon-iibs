@@ -1,23 +1,39 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar } from "../components/Sidebar";
-import Footer from "../components/Footer";
 import { AdminSidebar } from "../data/sidebar";
 import Header from './../components/Header';
+import { Breadcrumb } from "../components/Breadcumb";
 
 export default function Layout() {
 
+    const location = useLocation();
 
-    
-    
+
+    const getLinks = (path: string) => {
+
+        let ref = ''
+        const tab = path.split('/')
+        tab.shift();
+        return tab.map((link) => {
+            ref = ref + link + '/'
+            return { label: link, icon: "", href: ref}
+        })
+    }
+
     return (<>
         <main className="overflow-y-hidden">
             <div className={"flex overflow-y-hidden"}>
+
                 <Sidebar {...AdminSidebar} />
 
-                <div className={"flex-1 -z-10"}>
+                <div className={"flex-1 relative  overflow-y-hidden h-screen"}>
+
                     <Header />
-                    <Outlet />
-                    <Footer />
+
+                    <div className="h-[calc(100%-64px)] overflow-y-auto p-10 space-y-4">
+                        <Breadcrumb link={getLinks(location.pathname)} />
+                        <Outlet />
+                    </div>
                 </div>
             </div>
         </main>

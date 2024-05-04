@@ -54,13 +54,7 @@ export const USER_COLUMS = [
         }
       });
     },
-  },
-  {
-    label: "action",
-    sort: (data: any[], sens: boolean) => {
-      return data;
-    },
-  },
+  }
 ];
 
 export const USER_DATA = [
@@ -69,97 +63,83 @@ export const USER_DATA = [
     email: "",
     role: "admin",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user2",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user3",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user4",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user5",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user6",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user7",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user8",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user9",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user10",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user11",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user12",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user13",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
   {
     name: "user14",
     email: "",
     role: "user",
     status: "active",
-    products: ["product1", "product2", "product3"],
   },
 ];

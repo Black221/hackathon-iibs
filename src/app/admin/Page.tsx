@@ -6,9 +6,9 @@ import FormationsPage from "./formation/Page";
 import ParentsPage from "./parent/Page";
 import PaymentsPage from "./payment/Page";
 import PersonnelsPage from "./personnel/Page";
-import PointagesPage from "./pointage/Page";
+import PointingPage from "./pointing/Page";
 import TeachersPage from "./teacher/Page";
-
+import StudentPage from "./student/Page";
 
 
 export default function Page () {
@@ -21,8 +21,9 @@ export default function Page () {
                 <Route path="/parents/*" element={ <ParentsPage />} />
                 <Route path="/payments/*" element={ <PaymentsPage />} />
                 <Route path="/personnels/*" element={ <PersonnelsPage />} />
-                <Route path="/pointages/*" element={ <PointagesPage />} />
+                <Route path="/pointings/*" element={ <PointingPage />} />
                 <Route path="/teachers/*" element={ <TeachersPage />} />
+                <Route path="/students/*" element={ <StudentPage />} />
             </Route>
         </Routes>
     </>)
