@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom"
 import Layout from "./Layout"
-import Home from "./Home"
 
 function App() {
 
@@ -9,7 +8,9 @@ function App() {
 		<Routes>
 			<Route path="/" element={<Layout />}>
 
-				<Route path="/" element={<Home />} />
+				<Route path="/" element={
+					<div />
+				} />
 
 				<Route path="/marketplace" element={<div> </div> } />
 				<Route path="/profile" element={<div> Profile </div> } />
