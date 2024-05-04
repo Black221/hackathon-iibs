@@ -1,10 +1,10 @@
 
-function AddEvalution() {
+function AddLevel() {
   return (
     <div>
-      AddEvalution
+      AddLevel
     </div>
   );
 }
 
-export default AddEvalution;
+export default AddLevel;

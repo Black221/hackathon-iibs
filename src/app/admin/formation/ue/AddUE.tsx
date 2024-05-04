@@ -1,10 +1,10 @@
 
-function AddEvalution() {
+function AddUE() {
   return (
     <div>
-      AddEvaluation
+      AddUE
     </div>
   );
 }
 
-export default AddEvalution;
+export default AddUE;

@@ -1,10 +1,10 @@
 
-function ModifyEvaluation() {
+function ModifyUE() {
   return (
     <div>
-      ModifyEvaluation
+      ModifyUE
     </div>
   );
 }
 
-export default ModifyEvaluation;
+export default ModifyUE;

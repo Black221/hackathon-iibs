@@ -1,20 +1,22 @@
 import {Routes, Route} from "react-router-dom"
 import Layout from "./Layout";
+import ListLevel from "./ListLevel";
+import ModifyLevel from "./ModifyLevel";
+import AddLevel from "./AddLevel";
 
-function Page() {
+function LevelPage() {
   return (
 <Routes>
             <Route element={ <Layout />}>
 
-                <Route path="/" element={<div > List</div>} />
-                <Route path="/list" element={<div > List</div>} />
-                <Route path="/update" element={<div > Update</div>} />
-                <Route path="/modify" element={<div > Modify</div>} />
-                <Route path="/add" element={<div > Add</div>} />
+                <Route path="/" element={<div ><ListLevel/></div>} />
+                <Route path="/list" element={<div ><ListLevel/></div>} />
+                <Route path="/modify" element={<div ><ModifyLevel/></div>} />
+                <Route path="/add" element={<div ><AddLevel/></div>} />
             </Route>
 
         </Routes>
   );
 }
 
-export default Page;
+export default LevelPage;

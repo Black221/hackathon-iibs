@@ -1,10 +1,10 @@
 
-function ModifyEvaluation() {
+function ModifyLevel() {
   return (
     <div>
-      ModifyEvaluation
+      ModifyLevel
     </div>
   );
 }
 
-export default ModifyEvaluation;
+export default ModifyLevel;
