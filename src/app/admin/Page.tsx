@@ -9,6 +9,7 @@ export default function Page () {
         <Routes>
             <Route element={<Layout />}>
                 <Route path="/" element={<div > Bouna</div>} />
+                <Route path="/list" element={<div > Bouna</div>} />
             </Route>
         </Routes>
     </>)
