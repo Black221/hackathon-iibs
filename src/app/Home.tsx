@@ -1,12 +1,14 @@
 
-import Header from "../components/Header";
+// import Header from "../components/Header";
+
+import Login from "../auth/Login";
 
 export default function Home() {
  
   return (
     <>
-      <Header/>
-    
+      {/* <Header/> */}
+      <Login/>
     </>
   );
 }
