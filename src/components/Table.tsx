@@ -8,11 +8,13 @@ interface Props {
     columns: Column[];
     palette?: Color;
     actions: Action[];
+    search?: boolean;
+    add?: React.ReactElement;
 }
 
 interface Column {
     label: string;
-    sort: (data: Data[], sens: boolean) => any;
+    sort: (data: Data[], sens: boolean, column: string) => any;
 }
 
 interface Action {
@@ -30,22 +32,24 @@ interface Data {
     [index: string]: string | number;
 }
 
-export const Table = ({label, columns, data, actions}: Props) => {
+export const Table = ({label, columns, data, actions, search = true, add}: Props) => {
 
     const [sens, setSens] = useState<boolean>(false);
     const [current, setCurrent] = useState<Column>();
     const [display, setDisplay] = useState<Data[]>([])
     const [page, setPage] = useState<number>(0);
 
+    const [nbRender, setNbRender] = useState<number>(5);
+
     useEffect(() => {
-        setDisplay(data.slice(page, 5))
+        setDisplay(data.slice(page, nbRender))
         // eslint-disable-next-line
     }, [])
 
 
 
     const sort = (column: Column) => {
-        setDisplay(column.sort(data, sens));
+        setDisplay(column.sort(data, sens, column.label).slice(0, nbRender));
         
         const nSens = (current === column ? !sens : true);
         setSens(nSens)
@@ -60,12 +64,30 @@ export const Table = ({label, columns, data, actions}: Props) => {
         setPage(page as number)
     }
 
+    const [searchValue, setSearchValue] = useState<string>("");
+
+    useEffect(() => {
+        if (searchValue === "") {
+            setDisplay(data.slice(page, nbRender))
+        } else {
+            setDisplay(data.filter((d) => {
+                return Object.values(d).some((v) => {
+                    return v.toString().toLowerCase().includes(searchValue.toLowerCase())
+                })
+            }))
+        }
+        // eslint-disable-next-line
+    }, [searchValue])
+
     return (<>
 
         <div className="w-full bg-white space-y-10">
-            <div className="flex justify-between items-center px-8">
+            <div className="flex justify-between items-center ">
                 <h1 className="flex-1 text-start text-2xl font-bold text-gray-900">{label}</h1>
-                <Input className="w-80" placeholder="Rechercher" type="text" label='' onChange={(() => 0)} />
+                <div className="flex items-center">
+                    {search && <Input className="w-80" placeholder="Rechercher" type="text" label='' onChange={setSearchValue} />}
+                    {add}
+                </div>
             </div>
 
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -78,9 +100,9 @@ export const Table = ({label, columns, data, actions}: Props) => {
                                     <button className={"uppercase"} onClick={() => sort(c)}>{c.label}</button>
                                 </th>
                             ))}
-                            <th colSpan={actions.length} scope="col" className="px-3 py-3">
+                            {actions && actions.length > 0 && <th colSpan={actions.length} scope="col" className="px-3 py-3">
                                 Actions
-                            </th>
+                            </th>}
                         </tr>
                     </thead>
 
@@ -105,7 +127,7 @@ export const Table = ({label, columns, data, actions}: Props) => {
                 </table>
             </div>
 
-            <Pagination page={page} length={5} dataCount={data.length} action={onSetPage} />
+            <Pagination page={page} length={nbRender} dataCount={data.length} action={onSetPage} render={setNbRender} />
         </div>
     </>)
 }

@@ -9,6 +9,7 @@ import PersonnelsPage from "./personnel/Page";
 import PointingPage from "./pointing/Page";
 import TeachersPage from "./teacher/Page";
 import StudentPage from "./student/Page";
+import Home from "./Home";
 
 
 export default function Page () {
@@ -16,6 +17,7 @@ export default function Page () {
     return(<>
          <Routes>
             <Route element={<Layout />}>
+                <Route path="/" element={<Home />} />
                 <Route path="/calendar/*" element={ <CalendarPage />} />
                 <Route path="/formations/*" element={ <FormationsPage />} />
                 <Route path="/parents/*" element={ <ParentsPage />} />

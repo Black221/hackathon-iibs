@@ -78,7 +78,7 @@ export const AdminSidebar: ISidebar = {
                 {
                     name: "Events",
                     icon: <Icon name={"fas fa-calendar"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/calendar/events",
+                    to: "/admin/calendar/",
                 },
                 {
                     name: "New Event",
@@ -90,11 +90,6 @@ export const AdminSidebar: ISidebar = {
                     icon: <Icon name={"fas fa-calendar-alt"} size={18} color={"#000"} onClick={() => { }} />,
                     to: "/admin/calendar/timetable",
                 },
-                {
-                    name: "Manage Time table",
-                    icon: <Icon name={"fas fa-calendar-alt"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/calendar/manage",
-                }
             ],
         },
         {

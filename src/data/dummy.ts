@@ -1,60 +1,39 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
+interface Data {
+	[index: string]: string | number;
+}
+
+
+const sort = (data: Data[], sens: boolean) => {
+	return data.sort((a, b) => {
+		if (a.name < b.name) return sens ? -1 : 1;
+		if (a.name > b.name) return sens ? 1 : -1;
+		return 0;
+	})	
+}
+
 export const USER_COLUMS = [
-  {
-    label: "",
-    sort: (data: any[], sens: boolean) => {
-      return data;
-    },
-  },
-  {
-    label: "name",
-    sort: (data: any[], sens: boolean) => {
-      return data.sort((a, b) => {
-        if (sens) {
-          return a.name > b.name ? 1 : -1;
-        } else {
-          return a.name < b.name ? 1 : -1;
-        }
-      });
-    },
-  },
-  {
-    label: "email",
-    sort: (data: any[], sens: boolean) => {
-      return data.sort((a, b) => {
-        if (sens) {
-          return a.email > b.email ? 1 : -1;
-        } else {
-          return a.email < b.email ? 1 : -1;
-        }
-      });
-    },
-  },
-  {
-    label: "role",
-    sort: (data: any[], sens: boolean) => {
-      return data.sort((a, b) => {
-        if (sens) {
-          return a.role > b.role ? 1 : -1;
-        } else {
-          return a.role < b.role ? 1 : -1;
-        }
-      });
-    },
-  },
-  {
-    label: "status",
-    sort: (data: any[], sens: boolean) => {
-      return data.sort((a, b) => {
-        if (sens) {
-          return a.status > b.status ? 1 : -1;
-        } else {
-          return a.status < b.status ? 1 : -1;
-        }
-      });
-    },
-  }
+	{
+		label: "",
+		sort: sort
+	},
+	{
+		label: "name",
+		sort: sort
+	},
+	{
+		label: "email",
+		sort: sort
+	},
+	{
+		label: "role",
+		sort: sort
+	},
+	{
+		label: "status",
+		sort: sort
+	}
 ];
 
 export const USER_DATA = [

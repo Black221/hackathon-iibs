@@ -7,10 +7,11 @@ interface Props {
     length: number;
     dataCount: number;
     action: (action: string | number, nbRender: number) => void;
+    render: (index: number) => void;
 }
 
 
-export default function Pagination ({page, length, dataCount, action}: Props) {
+export default function Pagination ({page, length, dataCount, action, render}: Props) {
 
     const [nbToRender, setNbToRender] = useState<number>(length);
     const [pageList, setPageList] = useState(length);
@@ -20,6 +21,7 @@ export default function Pagination ({page, length, dataCount, action}: Props) {
         setNbToRender(nb);
         setPageList(Math.min(5, Math.floor(dataCount / nb)))
         action(0, nb);
+        render(nb);
     }
 
     return(<>

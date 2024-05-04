@@ -16,7 +16,7 @@ interface Cart {
 export const Card = ({img, title, description, tags, width = "sm", height = "36"}: Cart) => {
 
     return (<>
-        <div className={`max-w-${width} rounded-md overflow-hidden shadow-lg`}>
+        <div className={`max-w-${width} rounded-md overflow-hidden shadow-lg p-4`}>
             <div className={`w-full max-h-${height} flex items-center justify-center  overflow-hidden`}>
                 <img className={`w-full object-center h-auto`} src={img} alt={title} />
             </div>
