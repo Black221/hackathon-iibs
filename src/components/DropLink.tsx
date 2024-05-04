@@ -3,16 +3,26 @@ import up from "../assets/up.svg";
 import {NavLink} from "react-router-dom";
 import {useState} from "react";
 
-
-const DropLink = ({ label = "label", icon = null, links = [{name : "", icon: null, to : ""}] }) => {
+interface Props {
+    label: string,
+    icon?: React.ReactElement,
+    links: {
+        to: string,
+        name: string,
+        icon: React.ReactElement,
+    }[]
+}
+const DropLink = ({label, icon, links}: Props) => {
 
     const [drop, setDrop] = useState(true);
 
     return (<>
-        <div className={`w-full text- px-4 space-y-5`}>
-            <h3 onClick={() => setDrop(!drop)} className={"font-semibold flex items-center space-x-2"}>
-                {icon}
-                {label}
+        <div className={`w-full text- px-4 space-y-2`}>
+            <h3 onClick={() => setDrop(!drop)} className={"font-semibold flex items-center justify-between"}>
+                <div className="flex items-center">
+                    <div className="mr-3">{icon}</div>
+                    {label}
+                </div>
                 {!drop ? <img src={down} className={"w-8"} alt="" /> :  <img src={up} className={"w-8"} alt="" />}
             </h3>
 
@@ -20,7 +30,7 @@ const DropLink = ({ label = "label", icon = null, links = [{name : "", icon: nul
                 {links.map((link, index) => {
                     return (<li key={index}>
                         <NavLink className="flex items-center space-x-2"  to={link.to} >
-                            {link.icon}
+                            <div className="mr-4">{link.icon}</div>
                             {link.name}
                         </NavLink>
                     </li>)

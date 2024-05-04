@@ -1,17 +1,25 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header";
+import { Sidebar } from "../components/Sidebar";
 import Footer from "../components/Footer";
+import { AdminSidebar } from "../data/sidebar";
+import Header from './../components/Header';
 
 export default function Layout() {
 
+
+    
     
     return (<>
-        <div className="flex flex-col h-screen">
-            <Header />
-            <div className="flex-1">
-                <Outlet />
+        <main className="overflow-y-hidden">
+            <div className={"flex overflow-y-hidden"}>
+                <Sidebar {...AdminSidebar} />
+
+                <div className={"flex-1 -z-10"}>
+                    <Header />
+                    <Outlet />
+                    <Footer />
+                </div>
             </div>
-            <Footer />
-        </div>
+        </main>
     </>)
 }
