@@ -6,7 +6,7 @@ import Layout from "./Layout";
 export default function Page () {
 
     return(<>
-        <Routes>
+         <Routes>
             <Route element={<Layout />}>
                 <Route path="/" element={<div > Bouna</div>} />
             </Route>
