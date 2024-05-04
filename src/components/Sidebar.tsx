@@ -5,22 +5,24 @@ export interface ISidebar {
 
     app: {
         title: string,
-        link: HTMLElement,
+        link: React.ReactElement,
         logo: any,
     };
     droplist : {
+        icon?: React.ReactElement,
         group: string,
-        link: {
+        links: {
             to: string,
             name: string,
             icon: any,
         }[]
     }[];
     foot: {
-        link: HTMLElement,
+        link: React.ReactElement,
         icon: any,
     }
 }
+
 export const Sidebar = (props: ISidebar) => {
 
     return (<>
@@ -28,14 +30,15 @@ export const Sidebar = (props: ISidebar) => {
         <div className={`w-64 bg-white`}>
             <div className={`w-64 bg-main-bg h-screen drop-shadow-2xl shadow fixed z-10 text-center  space-y-10  top-0`}>
 
-                <div className={"flex flex-col h-full overflow-y-scroll pt-10 pb-8 "}>
+                <div className={"flex flex-col h-full overflow-y-scroll pt-6 pb-8 "}>
 
-                    <img src={"../flag.png"} alt="" className={`w-2/3 mx-auto rounded`}/>
+                    <h1 className={`text-4xl font-bold py-4`}>
+                        IIBS
+                    </h1>
 
-
-                    <div className={`w-full  text-start space-y-4 flex-1 pt-8`}>
+                    <div className={`w-full  text-start space-y-4 flex-1 pt-4`}>
                         {props.droplist.map((item, index) => <div key={index}>
-                            <DropLink label={item.group} links={item.link} />
+                            <DropLink icon={item.icon} label={item.group} links={item.links} />
                         </div>)}
                     </div>
 

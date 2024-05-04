@@ -1,12 +1,12 @@
+import { Table } from "../../../components/Table";
 
 
 
 export default function TimeTable() {
 
     return (<>
-        <div>
-            Add Event
-        </div>
+        
+        <Table data={[]} label="TimeTable" columns={[]} actions={[]} search={false} />
     
     </>)
 }
