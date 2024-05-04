@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import Chart from "react-apexcharts";
 import { toChartBar, toChartDonut, toChartLine } from "../utils/charts";
 import { USER_DATA } from "../data/dummy";
@@ -15,23 +12,12 @@ export default function Home() {
     true,
     "Chart Line exemple"
   );
->>>>>>> 1b84ecf28dc8fe5dbfa4e6ccd06bd6b3260be7d6
 
   return (
     <>
       <div className="container p-10">
         <h1>Home</h1>
 
-<<<<<<< HEAD
-
-    return(<>
-
-        <div className="w-48">
-
-        </div>
-    </>)
-}
-=======
         <Chart
           options={options1}
           series={series1}
@@ -54,4 +40,3 @@ export default function Home() {
     </>
   );
 }
->>>>>>> 1b84ecf28dc8fe5dbfa4e6ccd06bd6b3260be7d6

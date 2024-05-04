@@ -1,11 +1,10 @@
-import React from 'react';
 
-function AddEvaluation() {
+function AddEvalution() {
   return (
     <div>
-      AddEvaluation
+      AddEvalution
     </div>
   );
 }
 
-export default AddEvaluation;
+export default AddEvalution;

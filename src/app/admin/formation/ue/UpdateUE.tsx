@@ -1,11 +1,10 @@
-import React from 'react';
 
-function UpdateEvaluation() {
+function Update() {
   return (
     <div>
-      UpdateEvaluation
+      Update
     </div>
   );
 }
 
-export default UpdateEvaluation;
+export default Update;

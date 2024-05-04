@@ -10,7 +10,7 @@ function Page() {
                 <Route path="/list" element={<div > List</div>} />
                 <Route path="/update" element={<div > Update</div>} />
                 <Route path="/modify" element={<div > Modify</div>} />
-                <Route path="/add" element={<div > Bouna</div>} />
+                <Route path="/add" element={<div > Add</div>} />
             </Route>
 
         </Routes>
