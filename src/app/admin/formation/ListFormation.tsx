@@ -1,10 +1,10 @@
 
-function ListEvaluation() {
+function ListFormation() {
   return (
     <div>
-      ListEvaluation
+      ListFormation
     </div>
   );
 }
 
-export default ListEvaluation;
+export default ListFormation;

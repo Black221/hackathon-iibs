@@ -14,7 +14,7 @@ import TeachersPage from "./teacher/Page";
 export default function Page () {
 
     return(<>
-        <Routes>
+         <Routes>
             <Route element={<Layout />}>
                 <Route path="/calendar/*" element={ <CalendarPage />} />
                 <Route path="/formations/*" element={ <FormationsPage />} />
