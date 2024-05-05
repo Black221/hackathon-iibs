@@ -10,7 +10,7 @@ import PointingPage from "./pointing/Page";
 import TeachersPage from "./teacher/Page";
 import StudentPage from "./student/Page";
 import Home from "./Home";
-
+import NotificationPage from "./notification/Page";
 
 export default function Page () {
 
@@ -26,6 +26,7 @@ export default function Page () {
                 <Route path="/pointages/*" element={ <PointingPage />} />
                 <Route path="/enseignants/*" element={ <TeachersPage />} />
                 <Route path="/etudiants/*" element={ <StudentPage />} />
+                <Route path="/notifications/*" element={ <NotificationPage />} />
             </Route>
         </Routes>
     </>)

@@ -208,14 +208,14 @@ export const AdminSidebar: ISidebar = {
             group: "Notifications",
             links: [
                 {
-                    name: "Lists des notifications",
+                    name: "Liste des notifications",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
                     to: "/admin/notifications/liste",
                 },
                 {
-                    name: "Nouveau notification",
+                    name: "Nouvelle notification",
                     icon: <Icon name={"fas fa-plus"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/notifications/ajouter",
+                    to: "/admin/notifications/envoi",
                 },
             ],
         },
