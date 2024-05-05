@@ -28,7 +28,7 @@ function ListFormation() {
 	return (<>
         
         <div className="w-full">
-            <Table label="Liste des formation" columns={USER_COLUMS} data={USER_DATA} actions={ACTIONS} />
+            <Table label="Liste des formations" columns={USER_COLUMS} data={USER_DATA} actions={ACTIONS} />
         </div>
     
     </>)

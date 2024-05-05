@@ -8,7 +8,6 @@ function LevelPage() {
   return (
 <Routes>
             <Route element={ <Layout />}>
-
                 <Route path="/" element={<div ><ListLevel/></div>} />
                 <Route path="/list" element={<div ><ListLevel/></div>} />
                 <Route path="/modify" element={<div ><ModifyLevel/></div>} />
