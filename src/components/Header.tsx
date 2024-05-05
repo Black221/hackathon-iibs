@@ -13,7 +13,7 @@ export default function Header() {
 					</div>
 					<div className="flex items-center justify-end space-x-4">
 						{/* <InputSearch onChange={(value) => console.log(value)} placeholder="Search" className="w-80" /> */}
-						<div className="min-w-fit">John Doe</div>
+						<div className="min-w-fit">Le Hacker Souriant</div>
 						<div className="w-10 h-10 flex items-center">
 							<img
 								src="https://cnmi.spmi.pt/wp-content/uploads/2014/10/speaker-3.jpg"
@@ -23,7 +23,7 @@ export default function Header() {
 						</div>
 					</div>
 				</div>
-			
+				
 			</div>
 		</div>
 	</>);

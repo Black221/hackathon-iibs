@@ -120,7 +120,7 @@ export const AdminSidebar: ISidebar = {
         },
         {
             icon: <Icon name="fas fa-chalkboard-teacher" size={18} color={"#000"} onClick={() => { }} />,
-            group: "Ensiegnant",
+            group: "Enseignant",
             links: [
                 {
                     name: "Liste des enseignants",
@@ -219,6 +219,27 @@ export const AdminSidebar: ISidebar = {
                 },
             ],
         },
+        {
+            icon: <Icon name="fas fa-book" size={18} color={"#000"} onClick={() => { }} />,
+            group: "Bibliothèque",
+            links: [
+                {
+                    name: "Liste des livres",
+                    icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
+                    to: "/admin/bibliotheque/liste",
+                },
+                {
+                    name: "Ajouter livre",
+                    icon: <Icon name={"fas fa-plus"} size={18} color={"#000"} onClick={() => { }} />,
+                    to: "/admin/bibliotheque/ajouter",
+                },
+                {
+                    name: "Upload livres",
+                    icon: <Icon name={"fas fa-upload"} size={18} color={"#000"} onClick={() => { }} />,
+                    to: "/admin/bibliotheque/upload",
+                },
+            ],
+        }
     ],
     foot: {
         link: <a href={"/"}>Home</a>,

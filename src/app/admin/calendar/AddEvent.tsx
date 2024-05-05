@@ -17,7 +17,7 @@ export default function AddEvent() {
     return (
         <>
             <div className="mt-5 mx-auto border border-[#ccc] w-4/6 p-6 rounded-lg bg-white shadow-md">
-                <h2 className="text-xl font-semibold mb-4">Add Event</h2>
+                <h2 className="text-xl font-semibold mb-4">Ajouter un Evenement</h2>
                 <form onSubmit={onSave} className="flex flex-col gap-4">
                     <Input type="text" label="title" onChange={setTitle} />
                     <Textarea label="description" onChange={setDescription} className={""} row={0} disabled={false} />

@@ -5,17 +5,20 @@ import App from './app/App.tsx'
 import './index.css'
 import Login from './auth/Login.tsx'
 import Register from './auth/Register.tsx'
+import { ModalProvider } from './providers/ModalProvider.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<App />} />
-        
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
+    <ModalProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/*" element={<App />} />
+          
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
 
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </ModalProvider>
   </React.StrictMode>,
 )

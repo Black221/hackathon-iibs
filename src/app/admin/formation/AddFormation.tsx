@@ -20,7 +20,7 @@ export default function AddFormation() {
         
         <Button
           label="Enregistrer"
-          className="w-20 bg-[#0B5CFF] text-white rounded-lg hover:bg-[#0B5CFF]/90 py-2 transition-colors duration-300"
+          className="w-40 bg-[#0B5CFF] text-white rounded-lg hover:bg-[#0B5CFF]/90 py-2 transition-colors duration-300"
         />
       </form>
     </div>

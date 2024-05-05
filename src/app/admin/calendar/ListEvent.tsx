@@ -81,12 +81,13 @@ export default function ListEvent() {
     const EVENT_ACTIONS = [
         { 
             element: <Button label="Modify" />,
+            ref: "edit",
             onClick: () => {}
         }
     ]
     return (<>
         
-        <Table  label="Liste of events" data={EVENT_DATA} columns={EVENT_COLUMNS} actions={EVENT_ACTIONS} />
+        <Table  label="Liste des Evenements" data={EVENT_DATA} columns={EVENT_COLUMNS} actions={EVENT_ACTIONS} />
     
     </>)
 }

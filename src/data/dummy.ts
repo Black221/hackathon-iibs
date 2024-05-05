@@ -5,7 +5,7 @@ interface Data {
 }
 
 
-const sort = (data: Data[], sens: boolean) => {
+export const sort = (data: Data[], sens: boolean) => {
 	return data.sort((a, b) => {
 		if (a.name < b.name) return sens ? -1 : 1;
 		if (a.name > b.name) return sens ? 1 : -1;

@@ -8,7 +8,7 @@ export default function ListStudents() {
     return (<>
         
         <div className="w-full">
-            <Table label="List of Students" columns={USER_COLUMS} data={USER_DATA} actions={[]} />
+            <Table label="Liste des etudiants" columns={USER_COLUMS} data={USER_DATA} actions={[]} />
         </div>
     
     </>)

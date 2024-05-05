@@ -3,6 +3,8 @@ import { Sidebar } from "../components/Sidebar";
 import { AdminSidebar } from "../data/sidebar";
 import Header from './../components/Header';
 import { Breadcrumb } from "../components/Breadcumb";
+import useModal from "../hooks/useModal";
+import Modal from "../components/Modal";
 
 export default function Layout() {
 
@@ -20,7 +22,13 @@ export default function Layout() {
         })
     }
 
+    const { modalElement, modalOpen, onClose } = useModal();
+
+
     return (<>
+
+        <Modal children={modalElement} open={modalOpen} onClose={onClose} />
+
         <main className="overflow-y-hidden">
             <div className={"flex overflow-y-hidden"}>
 
