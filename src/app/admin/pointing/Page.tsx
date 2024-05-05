@@ -5,7 +5,7 @@ import AddPointing from "./AddPointing";
 
 
 
-export default function Page () {
+export default function PointingPage () {
 
     return (<>
         <Routes>
