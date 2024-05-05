@@ -32,6 +32,8 @@ export default function ViewFormation() {
                 return "ue";
             case 2:
                 return "matiere";
+            case 3:
+                return "evaluation";    
             default:
                 return "classe";
         }
@@ -52,17 +54,24 @@ export default function ViewFormation() {
                 setActive(2)
                 setQuery("")
             }} className={`${active === 2 ? "bg-blue-500 text-white" : "white"}`} />
+            <Button label="Evaluation" onClick={() => {
+                setActive(3)
+                setQuery("")
+            }} className={`${active === 2 ? "bg-blue-500 text-white" : "white"}`} />
         </div>
 
         <div>
             {active === 0 && <Table label="Liste des classes" columns={USER_COLUMS} data={USER_DATA} actions={ACTIONS} add={
                 <Button label="Ajouter une classes" className="ml-10" onClick={() => naviagate(getLink(0)+"?"+query)} />
             } />}
-            {active === 1 && <Table label="Liste des" columns={USER_COLUMS} data={USER_DATA} actions={ACTIONS} add={
+            {active === 1 && <Table label="Liste des Formations" columns={USER_COLUMS} data={USER_DATA} actions={ACTIONS} add={
                 <Button label="Ajouter une UE" className="ml-10" onClick={() => naviagate(getLink(1)+"?"+query)} />
             } />}
             {active === 2 && <Table label="Liste des Matieres" columns={USER_COLUMS} data={USER_DATA} actions={ACTIONS} add={
                 <Button label="Ajouter une Matiere" className="ml-10" onClick={() => naviagate(getLink(2)+"?"+query)} />
+            } />}
+            {active === 3 && <Table label="Liste des Evaluations" columns={USER_COLUMS} data={USER_DATA} actions={ACTIONS} add={
+                <Button label="Ajouter une Evaluation" className="ml-10" onClick={() => naviagate(getLink(2)+"?"+query)} />
             } />}
         </div>
     </>)
