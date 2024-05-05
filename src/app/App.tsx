@@ -17,9 +17,10 @@ function App() {
 
 			<Route path="/" element={<Layout />}>
 				<Route path="/admin/*" element={ <AdminPage /> } />
-				<Route path="/student/*" element={ <StudentPage /> } />
-				<Route path="/teacher/*" element={ <TeacherPage /> } />
+				<Route path="/enseignant/*" element={ <TeacherPage /> } />
 			</Route>
+
+			<Route path="/etudiant/*" element={ <StudentPage /> } />
 
 			<Route path="/parent/*" element={ <ParentPage /> } />
 			<Route path="*" element={<div>404</div>} />

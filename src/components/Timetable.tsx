@@ -24,17 +24,17 @@ export default function Timetable (props: Props) {
         "8:00",  "10:00", "12:00",  "14:00", "16:00", "18:00", "20:00"
     ]
 
-    const currentTime = new Date().getHours() - 3 + ":" + "00"
+    const currentTime = new Date().getHours() + ":" + "00"
     const currentDate = new Date().getDay()
   
 
     return (<>
-        <div className="border h-full w-full rounded-xl">
+        <div className="border h-full w-full">
             <table className="w-full bg-white rounded-md h-full border-collapse">
                 <thead className="h-16 ">
                     <tr className="">
                         <th className="py-2 px-6 ">
-                            Time
+                            Heures
                         </th>
                         {DAYS.map((d) => {
                             return (<th className="py-2 px-6">
@@ -49,7 +49,8 @@ export default function Timetable (props: Props) {
                             <td className="text-center">
                                 {h}
                             </td>
-                            {DAYS.map((d: string, index) => {
+                            {// eslint-disable-next-line
+                            DAYS.map((d: string, index) => {
                                 return (<td rowSpan={1} className={`border text-center ${currentDate == index && currentTime == h ? "bg-blue-100" : ""}`}>
                                     {props.data.filter((d: Data) => d.day == index && d.start == h).map((d: Data) => {
                                         return <div>{d.course}</div>

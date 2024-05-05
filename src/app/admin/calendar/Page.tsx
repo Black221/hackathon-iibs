@@ -17,7 +17,7 @@ export default function Page () {
                 <Route path="/" element={<ListEvent/>} />
                 <Route path="/liste" element={<ListEvent/>} />
                 <Route path="/ajouter-edt" element={<ManageTimetable/>} />
-                <Route path="/voir/:id" element={<ViewTimetable/>} />
+                <Route path="/edt/:id" element={<ViewTimetable/>} />
                 <Route path="/edt" element={<TimeTable/>} />
                 <Route path="/ajouter" element={<AddEvent/>} />
             </Route>
