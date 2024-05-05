@@ -4,7 +4,6 @@ import Timetable from "../../../components/Timetable";
 
 export default function ViewTimetable() {
 
-
     const TIMETABLE_DATA = [
         {
             day: 0,

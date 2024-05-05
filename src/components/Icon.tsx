@@ -10,8 +10,8 @@ interface Icon {
 export default function Icon ({ name, size, color, onClick}: Icon) {
 
     return(<>
-        <div className="flex flex-wrap items-center justify-center  p-1 rounded-full">
-            <i className={name} style={{fontSize: size, color: color}} onClick={onClick}></i>
-        </div>
+        <button className="flex flex-wrap items-center justify-center  p-1 rounded-full" onClick={onClick}>
+            <i className={name} style={{fontSize: size, color: color}} ></i>
+        </button>
     </>)
 }

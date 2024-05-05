@@ -6,17 +6,17 @@ interface Cart {
     img: string;
     title: string;
     subtitle?: string;
-    width?: "xs" | "sm" | "md" | "lg" | "xl" | "full";
+    width?: "36" | "44" | "52" | "64" | "72" | "80";
     height?: "36" | "44" | "52" | "64" | "72" | "80";
     description: string;
     tags: string[];
     extra?: React.ReactElement
 }
 
-export const Card = ({img, title, description, tags, width = "sm", height = "36"}: Cart) => {
+export const Card = ({img, title, description, tags, width = "36", height = "36"}: Cart) => {
 
     return (<>
-        <div className={`max-w-${width} rounded-md overflow-hidden shadow-lg p-4`}>
+        <div className={`w-${width} rounded-md overflow-hidden shadow-lg p-4`}>
             <div className={`w-full max-h-${height} flex items-center justify-center  overflow-hidden`}>
                 <img className={`w-full object-center h-auto`} src={img} alt={title} />
             </div>

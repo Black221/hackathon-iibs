@@ -15,7 +15,7 @@ interface Props {
 
 const DropLink = ({label, icon, links}: Props) => {
 
-    const [drop, setDrop] = useState(true);
+    const [drop, setDrop] = useState(false);
 
     return (<>
         <div className={`w-full text- px-4 space-y-2`}>
