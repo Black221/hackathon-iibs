@@ -90,6 +90,11 @@ export const AdminSidebar: ISidebar = {
                     icon: <Icon name={"fas fa-calendar-alt"} size={18} color={"#000"} onClick={() => { }} />,
                     to: "/admin/calendar/timetable",
                 },
+                {
+                    name: "New Time table",
+                    icon: <Icon name={"fas fa-calendar-alt"} size={18} color={"#000"} onClick={() => { }} />,
+                    to: "/admin/calendar/manage",
+                }
             ],
         },
         {
@@ -151,7 +156,7 @@ export const AdminSidebar: ISidebar = {
                 {
                     name: "Upload parents",
                     icon: <Icon name={"fas fa-upload"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/parents/assign",
+                    to: "/admin/parents/upload",
                 },
             ],
         },
@@ -185,16 +190,6 @@ export const AdminSidebar: ISidebar = {
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
                     to: "/admin/payments/list",
                 },
-                {
-                    name: "Add a payment",
-                    icon: <Icon name={"fas fa-plus"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/payments/add",
-                },
-                {
-                    name: "Upload payments",
-                    icon: <Icon name={"fas fa-upload"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/payments/assign",
-                },
             ],
         },
         {
@@ -205,11 +200,6 @@ export const AdminSidebar: ISidebar = {
                     name: "List of pointings",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
                     to: "/admin/pointings/list",
-                },
-                {
-                    name: "Add a pointing",
-                    icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/pointings/add",
                 }
             ],
         },

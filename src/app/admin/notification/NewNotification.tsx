@@ -3,7 +3,9 @@ import { USER_COLUMS, USER_DATA } from "../../../data/dummy";
 
 
 
-export default function ListPayment() {
+
+export default function NewNotification() {
+
 
     return (<>
             

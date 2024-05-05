@@ -1,10 +1,12 @@
+
+
 import { useEffect, useState } from "react"
 import InputFile from "../../../components/InputFile"
 import { Table } from "../../../components/Table"
 import { Data, Column } from "../../../types/Table"
 
 
-export default function UploadPersonnel() {
+export default function UploadParent() {
 
     const [files, setFiles] = useState<FileList | null>()
     const [data, setData] = useState<Data[]>([])

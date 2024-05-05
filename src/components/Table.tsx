@@ -19,7 +19,7 @@ interface Column {
 
 interface Action {
     element: React.ReactElement;
-    onClick: () => void;
+    onClick: (data:string | number) => void;
 }
 
 interface Color {
@@ -115,7 +115,7 @@ export const Table = ({label, columns, data, actions, search = true, add}: Props
                                     </th>
                                 ))}
                                 {actions && actions.map((a, index) => (
-                                    <th key={index} scope="col" onClick={a.onClick} className="px-3 py-3 text-light text-blue-400 border-l underline">
+                                    <th key={index} scope="col" onClick={() => a.onClick(d.id)} className="px-3 py-3 text-light text-blue-400 border-l underline">
                                         {a.element}
                                     </th>
                                 ))}

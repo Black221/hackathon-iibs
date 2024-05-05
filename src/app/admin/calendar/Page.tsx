@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router";
 import Layout from "./Layout";
 import ListEvent from "./ListEvent";
-import ManageTimeTable from "./ManageTimeTable";
+import ManageTimetable from "./ManageTimetable";
 import TimeTable from "./TimeTable";
 import AddEvent from "./AddEvent";
+import ViewTimetable from "./ViewTimetable";
 
 
 
@@ -13,11 +14,12 @@ export default function Page () {
         <Routes>
             <Route element={ <Layout />}>
 
-                <Route path="/" element={<div ><ListEvent/></div>} />
-                <Route path="/list" element={<div ><ListEvent/></div>} />
-                <Route path="/manage" element={<div ><ManageTimeTable/></div>} />
-                <Route path="/timetable" element={<div ><TimeTable/></div>} />
-                <Route path="/add" element={<div ><AddEvent/></div>} />
+                <Route path="/" element={<ListEvent/>} />
+                <Route path="/list" element={<ListEvent/>} />
+                <Route path="/manage" element={<ManageTimetable/>} />
+                <Route path="/timetable/:id" element={<ViewTimetable/>} />
+                <Route path="/timetable" element={<TimeTable/>} />
+                <Route path="/add" element={<AddEvent/>} />
             </Route>
 
         </Routes>

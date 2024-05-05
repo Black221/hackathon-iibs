@@ -15,7 +15,7 @@ export default function Page () {
                 <Route path="/" element={ <ListStudents />} />
                 <Route path="/list" element={ <ListStudents />} />
                 <Route path="/add" element={ <AddStudent />} />
-                <Route path="/modify" element={<UploadStudents/>} />
+                <Route path="/upload" element={<UploadStudents/>} />
             </Route>
 
         </Routes>
