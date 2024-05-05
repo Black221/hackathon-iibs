@@ -14,10 +14,10 @@ export default function Page () {
             <Route element={ <Layout />}>
 
                 <Route path="/" element={ <ListTeachers />} />
-                <Route path="/list" element={ <ListTeachers />} />
+                <Route path="/liste" element={ <ListTeachers />} />
                 <Route path="/upload" element={ <UploadTeacher />} />
-                <Route path="/modify" element={<ModifyTeacher />} />
-                <Route path="/add" element={ <AddTeacher />} />
+                <Route path="/modifier" element={<ModifyTeacher />} />
+                <Route path="/ajouter" element={ <AddTeacher />} />
             </Route>
 
         </Routes>

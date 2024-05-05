@@ -3,7 +3,7 @@ import Icon from '../components/Icon';
 import { ISidebar } from '../types/sidebar';
 
 
-export const StudentSidebar: ISidebar = {
+export const etudiantidebar: ISidebar = {
 
     app: {
         title: "Student",
@@ -17,12 +17,12 @@ export const StudentSidebar: ISidebar = {
                 {
                     name: "List",
                     icon: "fas fa-list",
-                    to: "/student/list",
+                    to: "/student/liste",
                 },
                 {
                     name: "Add",
                     icon: "fas fa-plus",
-                    to: "/student/add",
+                    to: "/student/ajouter",
                 },
             ],
         },
@@ -47,12 +47,12 @@ export const TeacherSidebar: ISidebar = {
                 {
                     name: "List",
                     icon: "fas fa-list",
-                    to: "/teacher/list",
+                    to: "/teacher/liste",
                 },
                 {
                     name: "Add",
                     icon: "fas fa-plus",
-                    to: "/teacher/add",
+                    to: "/teacher/ajouter",
                 },
             ],
         },
@@ -73,69 +73,69 @@ export const AdminSidebar: ISidebar = {
     droplist: [
         {
             icon: <Icon name="fas fa-calendar" size={18} color={"#000"} onClick={() => { }} />,
-            group: "Calendar",
+            group: "Calendrier",
             links: [
                 {
-                    name: "Events",
+                    name: "Evenements",
                     icon: <Icon name={"fas fa-calendar"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/calendar/",
+                    to: "/admin/calendrier",
                 },
                 {
-                    name: "New Event",
+                    name: "Ajouter Evenement",
                     icon: <Icon name={"fas fa-calendar-plus"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/calendar/add",
+                    to: "/admin/calendrier/ajouter",
                 },
                 {
-                    name: "Time tables",
+                    name: "EDT",
                     icon: <Icon name={"fas fa-calendar-alt"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/calendar/timetable",
+                    to: "/admin/calendrier/edt",
                 },
                 {
-                    name: "New Time table",
+                    name: "Ajouter EDT",
                     icon: <Icon name={"fas fa-calendar-alt"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/calendar/manage",
+                    to: "/admin/calendrier/ajouter-edt",
                 }
             ],
         },
         {
             icon: <Icon name="fas fa-users" size={18} color={"#000"} onClick={() => { }} />,
-            group: "Students",
+            group: "Etudiant",
             links: [
                 {
-                    name: "List of students",
+                    name: "Liste des étudiant",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/students/list",
+                    to: "/admin/etudiants/liste",
                 },
                 {
-                    name: "Add a student",
+                    name: "Ajouter étudiant",
                     icon: <Icon name={"fas fa-plus"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/students/add",
+                    to: "/admin/etudiants/ajouter",
                 },
                 {
-                    name: "Upload students",
+                    name: "Upload étudiant",
                     icon: <Icon name={"fas fa-upload"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/students/upload",
+                    to: "/admin/etudiants/upload",
                 }
             ],
         },
         {
             icon: <Icon name="fas fa-chalkboard-teacher" size={18} color={"#000"} onClick={() => { }} />,
-            group: "Teachers",
+            group: "Ensiegnant",
             links: [
                 {
-                    name: "List of teachers",
+                    name: "Liste des enseignants",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/teachers/list",
+                    to: "/admin/enseignants/liste",
                 },
                 {
-                    name: "Add a teacher",
+                    name: "Ajouter enseignant",
                     icon: <Icon name={"fas fa-plus"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/teachers/add",
+                    to: "/admin/enseignants/ajouter",
                 },
                 {
-                    name: "Upload teachers",
+                    name: "Upload enseignants",
                     icon: <Icon name={"fas fa-upload"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/teachers/upload",
+                    to: "/admin/enseignants/upload",
                 },
             ],
         },
@@ -144,14 +144,14 @@ export const AdminSidebar: ISidebar = {
             group: "Parents",
             links: [
                 {
-                    name: "List of parents",
+                    name: "Liste des parents",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/parents/list",
+                    to: "/admin/parents/liste",
                 },
                 {
-                    name: "Add a parent",
+                    name: "Ajouter parent",
                     icon: <Icon name={"fas fa-plus"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/parents/add",
+                    to: "/admin/parents/ajouter",
                 },
                 {
                     name: "Upload parents",
@@ -165,59 +165,60 @@ export const AdminSidebar: ISidebar = {
             group: "Formations",
             links: [
                 {
-                    name: "List of formations",
+                    name: "Liste des formations",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/formations/list",
+                    to: "/admin/formations/liste",
                 },
                 {
-                    name: "Add a formation",
+                    name: "Ajouter formation",
                     icon: <Icon name={"fas fa-plus"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/formations/add",
+                    to: "/admin/formations/ajouter",
                 },
                 {
                     name: "Upload formations",
                     icon: <Icon name={"fas fa-upload"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/formations/assign",
+                    to: "/admin/formations/upload",
                 },
             ],
         },
         {
             icon: <Icon name="fas fa-money-bill-wave" size={18} color={"#000"} onClick={() => { }} />,
-            group: "Payments",
+            group: "Paiements",
             links: [
                 {
-                    name: "List of payments",
+                    name: "Liste des paiements",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/payments/list",
+                    to: "/admin/paiements/liste",
                 },
             ],
         },
         {
             icon: <Icon name="fas fa-clipboard-list" size={18} color={"#000"} onClick={() => { }} />,
-            group: "Pointing",
+            group: "Pointages",
             links: [
                 {
-                    name: "List of pointings",
+                    name: "Liste des pointages",
                     icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
-                    to: "/admin/pointings/list",
+                    to: "/admin/pointages/liste",
                 }
             ],
         },
-        // {
-        //     group: "Room",
-        //     links: [
-        //         {
-        //             name: "List",
-        //             icon: "fas fa-list",
-        //             to: "/admin/room/list",
-        //         },
-        //         {
-        //             name: "Add",
-        //             icon: "fas fa-plus",
-        //             to: "/admin/room/add",
-        //         },
-        //     ],
-        // },
+        {
+            icon: <Icon name="fas fa-bell" size={18} color={"#000"} onClick={() => { }} />,
+            group: "Notifications",
+            links: [
+                {
+                    name: "Lists des notifications",
+                    icon: <Icon name={"fas fa-list"} size={18} color={"#000"} onClick={() => { }} />,
+                    to: "/admin/notifications/liste",
+                },
+                {
+                    name: "Nouveau notification",
+                    icon: <Icon name={"fas fa-plus"} size={18} color={"#000"} onClick={() => { }} />,
+                    to: "/admin/notifications/ajouter",
+                },
+            ],
+        },
     ],
     foot: {
         link: <a href={"/"}>Home</a>,

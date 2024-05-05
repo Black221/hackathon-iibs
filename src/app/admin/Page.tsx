@@ -18,14 +18,14 @@ export default function Page () {
          <Routes>
             <Route element={<Layout />}>
                 <Route path="/" element={<Home />} />
-                <Route path="/calendar/*" element={ <CalendarPage />} />
+                <Route path="/calendrier/*" element={ <CalendarPage />} />
                 <Route path="/formations/*" element={ <FormationsPage />} />
                 <Route path="/parents/*" element={ <ParentsPage />} />
-                <Route path="/payments/*" element={ <PaymentsPage />} />
+                <Route path="/paiements/*" element={ <PaymentsPage />} />
                 <Route path="/personnels/*" element={ <PersonnelsPage />} />
-                <Route path="/pointings/*" element={ <PointingPage />} />
-                <Route path="/teachers/*" element={ <TeachersPage />} />
-                <Route path="/students/*" element={ <StudentPage />} />
+                <Route path="/pointages/*" element={ <PointingPage />} />
+                <Route path="/enseignants/*" element={ <TeachersPage />} />
+                <Route path="/etudiants/*" element={ <StudentPage />} />
             </Route>
         </Routes>
     </>)

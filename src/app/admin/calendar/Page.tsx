@@ -15,11 +15,11 @@ export default function Page () {
             <Route element={ <Layout />}>
 
                 <Route path="/" element={<ListEvent/>} />
-                <Route path="/list" element={<ListEvent/>} />
-                <Route path="/manage" element={<ManageTimetable/>} />
-                <Route path="/timetable/:id" element={<ViewTimetable/>} />
-                <Route path="/timetable" element={<TimeTable/>} />
-                <Route path="/add" element={<AddEvent/>} />
+                <Route path="/liste" element={<ListEvent/>} />
+                <Route path="/ajouter-edt" element={<ManageTimetable/>} />
+                <Route path="/voir/:id" element={<ViewTimetable/>} />
+                <Route path="/edt" element={<TimeTable/>} />
+                <Route path="/ajouter" element={<AddEvent/>} />
             </Route>
 
         </Routes>

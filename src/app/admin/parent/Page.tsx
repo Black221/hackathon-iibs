@@ -13,8 +13,8 @@ export default function Page () {
             <Route element={ <Layout />}>
 
                 <Route path="/" element={<ListParents />} />
-                <Route path="/list" element={<ListParents />} />
-                <Route path="/add" element={ <AddParent /> } />
+                <Route path="/liste" element={<ListParents />} />
+                <Route path="/ajouter" element={ <AddParent /> } />
                 <Route path="/upload" element={<UploadParent />} />
             </Route>
 

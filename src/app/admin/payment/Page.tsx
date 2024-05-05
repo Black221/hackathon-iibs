@@ -12,8 +12,8 @@ export default function Page () {
             <Route element={ <Layout />}>
 
                 <Route path="/" element={<ListPayment />} />
-                <Route path="/list" element={<ListPayment />} />
-                <Route path="/notify" element={<Notification />} />
+                <Route path="/liste" element={<ListPayment />} />
+                <Route path="/notifier" element={<Notification />} />
             </Route>
 
         </Routes>

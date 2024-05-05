@@ -13,8 +13,8 @@ export default function Page () {
             <Route element={ <Layout />}>
 
                 <Route path="/" element={ <ListStudents />} />
-                <Route path="/list" element={ <ListStudents />} />
-                <Route path="/add" element={ <AddStudent />} />
+                <Route path="/liste" element={ <ListStudents />} />
+                <Route path="/ajouter" element={ <AddStudent />} />
                 <Route path="/upload" element={<UploadStudents/>} />
             </Route>
 

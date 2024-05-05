@@ -14,14 +14,14 @@ function Page() {
 		<Routes>
 			<Route element={ <Layout />}>
 				<Route path="/" element={ <ListFormation />} />
-				<Route path="/list" element={ <ListFormation />} />
+				<Route path="/liste" element={ <ListFormation />} />
 				<Route path="/upload" element={ <UploadFormation />} />
-				<Route path="/modify/:id" element={ <ModifyFormation />} />
-				<Route path="/add" element={ <AddFormation />} />
-				<Route path="/course/*" element={<div > <CoursePage/></div>} />
-				<Route path="/evaluation/*" element={<div > <EvaluationPage/></div>} />
-				<Route path="/level/*" element={<div > <LevelPage/></div>} />
-				<Route path="/ue/*" element={<div > <UEPage/></div>} />
+				<Route path="/modifier/:id" element={ <ModifyFormation />} />
+				<Route path="/ajouter" element={ <AddFormation />} />
+				<Route path="/cours/*" element={<CoursePage/>} />
+				<Route path="/evaluation/*" element={<EvaluationPage/>} />
+				<Route path="/niveau/*" element={<LevelPage/>} />
+				<Route path="/ue/*" element={<UEPage/>} />
 			</Route>
 		</Routes>
 	);

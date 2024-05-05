@@ -14,9 +14,9 @@ export default function Page () {
             <Route element={ <Layout />}>
 
                 <Route path="/" element={<ListPersonnel />} />
-                <Route path="/list" element={<ListPersonnel />} />
-                <Route path="/modify/:id" element={<ModifyPersonnel />} />
-                <Route path="/add" element={<AddPersonnel />} />
+                <Route path="/liste" element={<ListPersonnel />} />
+                <Route path="/modifier/:id" element={<ModifyPersonnel />} />
+                <Route path="/ajouter" element={<AddPersonnel />} />
                 <Route path="/upload" element={<UploadPersonnel />} />
             </Route>
         </Routes>

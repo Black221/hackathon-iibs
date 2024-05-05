@@ -13,8 +13,8 @@ export default function Page () {
             <Route element={ <Layout />}>
 
                 <Route path="/" element={<ListPointing />} />
-                <Route path="/list" element={<ListPointing />} />
-                <Route path="/add" element={<AddPointing />} />
+                <Route path="/liste" element={<ListPointing />} />
+                <Route path="/ajouter" element={<AddPointing />} />
 
             </Route>
 
