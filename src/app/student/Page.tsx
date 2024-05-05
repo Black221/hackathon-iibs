@@ -10,10 +10,11 @@ export default function Page () {
             <Route element={ <Layout />}>
 
                 <Route path="/" element={<div > List</div>} />
-                <Route path="/list" element={<div > List</div>} />
-                <Route path="/manage" element={<div > Bouna</div>} />
-                <Route path="/timetable" element={<div > Bouna</div>} />
-                <Route path="/add" element={<div > Bouna</div>} />
+                <Route path="/pointage" element={<div > List</div>} />
+                <Route path="/calendrier/*" element={<div > List</div>} />
+                <Route path="/offre/*" element={<div > Bouna</div>} />
+                <Route path="/formations/*" element={<div > Bouna</div>} />
+                <Route path="/biblio/*" element={<div > Bouna</div>} />
             </Route>
 
         </Routes>
