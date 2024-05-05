@@ -50,7 +50,7 @@ export default function Timetable (props: Props) {
                                 {h}
                             </td>
                             {// eslint-disable-next-line
-                            DAYS.map((d: string, index) => {
+                            DAYS.map((_: string, index) => {
                                 return (<td rowSpan={1} className={`border text-center ${currentDate == index && currentTime == h ? "bg-blue-100" : ""}`}>
                                     {props.data.filter((d: Data) => d.day == index && d.start == h).map((d: Data) => {
                                         return <div>{d.course}</div>
