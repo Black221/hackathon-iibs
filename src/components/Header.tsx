@@ -9,7 +9,7 @@ export default function Header() {
 
 					<div className="flex items-center space-x-4">
 						<h1 className="font-bold text-3xl">IIBS</h1>
-						<p className="text-base font-light">Institu informatique business school</p>
+						<p className="text-base font-light">Institut informatique business school</p>
 					</div>
 					<div className="flex items-center justify-end space-x-4">
 						{/* <InputSearch onChange={(value) => console.log(value)} placeholder="Search" className="w-80" /> */}

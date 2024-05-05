@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 export interface SelectProps {
-    label: string;
+    label?: string;
     className?: string;
     onChange: (value: string) => void;
     options: string[];
