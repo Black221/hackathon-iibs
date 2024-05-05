@@ -46,12 +46,14 @@ export default function TimeTable() {
     const TIME_TABLE_ACTIONS = [
         {
             element: <button>View</button>,
+            ref: "id",
             onClick: (data: string | number) => {
                 navigate(""+data)
             }
         },
         {
             element: <button>Edit</button>,
+            ref: "id",
             onClick: () => { }
         }
     ]
